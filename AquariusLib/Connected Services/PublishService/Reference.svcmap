@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ad045f86-a4f6-44a6-8cea-ca8d31c44a9e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>true</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://d-mdm4/AQUARIUS/Publish/AquariusPublishService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AquariusPublishService.xsd" MetadataType="Schema" ID="f01a51ac-a27c-489d-863b-631f0a0626ce" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/Publish/AquariusPublishService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AquariusPublishService.wsdl" MetadataType="Wsdl" ID="7fd45bec-0e90-47de-a106-2517aaf07015" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/Publish/AquariusPublishService.svc?wsdl" />
+    <MetadataFile FileName="AquariusPublishService.disco" MetadataType="Disco" ID="3d8194be-8469-40b0-8ec4-a0494b4366c1" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/Publish/AquariusPublishService.svc?disco" />
+    <MetadataFile FileName="AquariusPublishService1.xsd" MetadataType="Schema" ID="4e2ab89a-84df-4e1e-a811-70cd30da737f" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/Publish/AquariusPublishService.svc?xsd=xsd3" />
+    <MetadataFile FileName="AquariusPublishService2.xsd" MetadataType="Schema" ID="f5675274-bbfe-4b2d-848a-dc9c5f60c57b" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/Publish/AquariusPublishService.svc?xsd=xsd4" />
+    <MetadataFile FileName="AquariusPublishService3.xsd" MetadataType="Schema" ID="4c00d41c-2df8-4901-888e-2942df5869ee" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/Publish/AquariusPublishService.svc?xsd=xsd5" />
+    <MetadataFile FileName="AquariusPublishService4.xsd" MetadataType="Schema" ID="c51f913e-534a-45a8-9f42-70d4185aa78f" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/Publish/AquariusPublishService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AquariusPublishService5.xsd" MetadataType="Schema" ID="54df872c-c2bd-40c8-9734-9e46fb9f4554" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/Publish/AquariusPublishService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

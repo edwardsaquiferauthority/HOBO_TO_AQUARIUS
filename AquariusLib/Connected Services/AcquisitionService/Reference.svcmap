@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e2ca558c-7bab-41d1-b966-4bb5af3f4b75" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>true</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://d-mdm4/AQUARIUS/AQAcquisitionService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AQAcquisitionService.xsd" MetadataType="Schema" ID="0bd5981f-ade3-4caf-af80-3228f1c60ff8" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/AQAcquisitionService.svc?xsd=xsd7" />
+    <MetadataFile FileName="AQAcquisitionService1.xsd" MetadataType="Schema" ID="ff5e1930-a52d-4f1e-9b79-d27ec5e6f9db" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/AQAcquisitionService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AQAcquisitionService2.xsd" MetadataType="Schema" ID="0640d4c3-bc0d-4242-9573-4498fa5ba930" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/AQAcquisitionService.svc?xsd=xsd4" />
+    <MetadataFile FileName="AQAcquisitionService3.xsd" MetadataType="Schema" ID="29ef5455-af91-417b-ac09-f29ce16937ca" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/AQAcquisitionService.svc?xsd=xsd3" />
+    <MetadataFile FileName="AQAcquisitionService4.xsd" MetadataType="Schema" ID="c7d80c7d-5772-4483-baa2-7a3972159001" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/AQAcquisitionService.svc?xsd=xsd6" />
+    <MetadataFile FileName="AQAcquisitionService.disco" MetadataType="Disco" ID="409a1e5b-4052-47bd-9c4a-c23e7297ba99" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/AQAcquisitionService.svc?disco" />
+    <MetadataFile FileName="AQAcquisitionService5.xsd" MetadataType="Schema" ID="103a5f05-d703-4707-a853-8587414f35de" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/AQAcquisitionService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AQAcquisitionService6.xsd" MetadataType="Schema" ID="21788f6a-bb82-43df-bad3-309d35ff745f" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/AQAcquisitionService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AQAcquisitionService7.xsd" MetadataType="Schema" ID="45798a03-9502-470f-961a-d905372b16df" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/AQAcquisitionService.svc?xsd=xsd5" />
+    <MetadataFile FileName="AQAcquisitionService.wsdl" MetadataType="Wsdl" ID="5f0dc94c-a035-4cec-9d60-79bf2765d9ae" SourceId="1" SourceUrl="http://d-mdm4/AQUARIUS/AQAcquisitionService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

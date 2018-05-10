@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AquariusPublishService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://d-mdm4/AQUARIUS/Publish/AquariusPublishService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://d-mdm4/AQUARIUS/Publish/AquariusPublishService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://d-mdm4/AQUARIUS/Publish/AquariusPublishService.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://d-mdm4/AQUARIUS/Publish/AquariusPublishService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/AquariusDataService.Dto" />
+      <xsd:import schemaLocation="http://d-mdm4/AQUARIUS/Publish/AquariusPublishService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://d-mdm4/AQUARIUS/Publish/AquariusPublishService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAquariusPublishService_GetAuthToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetAuthToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuthTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_IsConnectionValid_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsConnectionValid" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_IsConnectionValid_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_IsConnectionValid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsConnectionValidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_KeepConnectionAlive_InputMessage">
+    <wsdl:part name="parameters" element="tns:KeepConnectionAlive" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_KeepConnectionAlive_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_KeepConnectionAlive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:KeepConnectionAliveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetParameterList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetParameterList" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetParameterList_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetParameterList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetParameterListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetFlagList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlagList" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetFlagList_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetFlagList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlagListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetGradeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGradeList" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetGradeList_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetGradeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGradeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetApprovalList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApprovalList" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetApprovalList_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetApprovalList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApprovalListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetPublishViewList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPublishViewList" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetPublishViewList_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetPublishViewList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPublishViewListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetDataSetsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataSetsList" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetDataSetsList_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetDataSetsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataSetsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetTimeSeriesData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimeSeriesData" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetTimeSeriesData_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetTimeSeriesData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimeSeriesDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetTimeSeriesRawData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimeSeriesRawData" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetTimeSeriesRawData_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetTimeSeriesRawData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimeSeriesRawDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetTimeSeriesDataResampled_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimeSeriesDataResampled" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetTimeSeriesDataResampled_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetTimeSeriesDataResampled_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTimeSeriesDataResampledResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetRatingCurveList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRatingCurveList" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetRatingCurveList_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetRatingCurveList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRatingCurveListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetRatingTableAsCsvByIdentifier_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRatingTableAsCsvByIdentifier" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetRatingTableAsCsvByIdentifier_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetRatingTableAsCsvByIdentifier_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRatingTableAsCsvByIdentifierResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetRatingTable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRatingTable" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetRatingTable_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetRatingTable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRatingTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetRatingTableExtension_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRatingTableExtension" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetRatingTableExtension_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetRatingTableExtension_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRatingTableExtensionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetTemplateList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplateList" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetTemplateList_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetTemplateList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTemplateListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetReportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportData" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetReportData_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetReportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocations" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetLocations_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetLocationsByFolderId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationsByFolderId" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetLocationsByFolderId_InputMessage_Headers">
+    <wsdl:part name="AQAuthToken" element="AQAuthToken" />
+  </wsdl:message>
+  <wsdl:message name="IAquariusPublishService_GetLocationsByFolderId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationsByFolderIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAquariusPublishService">
+    <wsdl:operation name="GetAuthToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAQAuthSession/GetAuthToken" message="tns:IAquariusPublishService_GetAuthToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAQAuthSession/GetAuthTokenResponse" message="tns:IAquariusPublishService_GetAuthToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsConnectionValid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAQAuthSession/IsConnectionValid" message="tns:IAquariusPublishService_IsConnectionValid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAQAuthSession/IsConnectionValidResponse" message="tns:IAquariusPublishService_IsConnectionValid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="KeepConnectionAlive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAQAuthSession/KeepConnectionAlive" message="tns:IAquariusPublishService_KeepConnectionAlive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAQAuthSession/KeepConnectionAliveResponse" message="tns:IAquariusPublishService_KeepConnectionAlive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParameterList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetParameterList" message="tns:IAquariusPublishService_GetParameterList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetParameterListResponse" message="tns:IAquariusPublishService_GetParameterList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlagList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetFlagList" message="tns:IAquariusPublishService_GetFlagList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetFlagListResponse" message="tns:IAquariusPublishService_GetFlagList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGradeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetGradeList" message="tns:IAquariusPublishService_GetGradeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetGradeListResponse" message="tns:IAquariusPublishService_GetGradeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApprovalList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetApprovalList" message="tns:IAquariusPublishService_GetApprovalList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetApprovalListResponse" message="tns:IAquariusPublishService_GetApprovalList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishViewList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetPublishViewList" message="tns:IAquariusPublishService_GetPublishViewList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetPublishViewListResponse" message="tns:IAquariusPublishService_GetPublishViewList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataSetsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetDataSetsList" message="tns:IAquariusPublishService_GetDataSetsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetDataSetsListResponse" message="tns:IAquariusPublishService_GetDataSetsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeSeriesData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetTimeSeriesData" message="tns:IAquariusPublishService_GetTimeSeriesData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetTimeSeriesDataResponse" message="tns:IAquariusPublishService_GetTimeSeriesData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeSeriesRawData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetTimeSeriesRawData" message="tns:IAquariusPublishService_GetTimeSeriesRawData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetTimeSeriesRawDataResponse" message="tns:IAquariusPublishService_GetTimeSeriesRawData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeSeriesDataResampled">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetTimeSeriesDataResampled" message="tns:IAquariusPublishService_GetTimeSeriesDataResampled_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetTimeSeriesDataResampledResponse" message="tns:IAquariusPublishService_GetTimeSeriesDataResampled_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRatingCurveList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetRatingCurveList" message="tns:IAquariusPublishService_GetRatingCurveList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetRatingCurveListResponse" message="tns:IAquariusPublishService_GetRatingCurveList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRatingTableAsCsvByIdentifier">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetRatingTableAsCsvByIdentifier" message="tns:IAquariusPublishService_GetRatingTableAsCsvByIdentifier_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetRatingTableAsCsvByIdentifierResponse" message="tns:IAquariusPublishService_GetRatingTableAsCsvByIdentifier_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRatingTable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetRatingTable" message="tns:IAquariusPublishService_GetRatingTable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetRatingTableResponse" message="tns:IAquariusPublishService_GetRatingTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRatingTableExtension">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetRatingTableExtension" message="tns:IAquariusPublishService_GetRatingTableExtension_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetRatingTableExtensionResponse" message="tns:IAquariusPublishService_GetRatingTableExtension_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetTemplateList" message="tns:IAquariusPublishService_GetTemplateList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetTemplateListResponse" message="tns:IAquariusPublishService_GetTemplateList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetReportData" message="tns:IAquariusPublishService_GetReportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetReportDataResponse" message="tns:IAquariusPublishService_GetReportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetLocations" message="tns:IAquariusPublishService_GetLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetLocationsResponse" message="tns:IAquariusPublishService_GetLocations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationsByFolderId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAquariusPublishService/GetLocationsByFolderId" message="tns:IAquariusPublishService_GetLocationsByFolderId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAquariusPublishService/GetLocationsByFolderIdResponse" message="tns:IAquariusPublishService_GetLocationsByFolderId_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAquariusPublishService" type="tns:IAquariusPublishService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAuthToken">
+      <soap:operation soapAction="http://tempuri.org/IAQAuthSession/GetAuthToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsConnectionValid">
+      <soap:operation soapAction="http://tempuri.org/IAQAuthSession/IsConnectionValid" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_IsConnectionValid_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KeepConnectionAlive">
+      <soap:operation soapAction="http://tempuri.org/IAQAuthSession/KeepConnectionAlive" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_KeepConnectionAlive_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParameterList">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetParameterList" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetParameterList_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlagList">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetFlagList" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetFlagList_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGradeList">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetGradeList" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetGradeList_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApprovalList">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetApprovalList" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetApprovalList_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPublishViewList">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetPublishViewList" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetPublishViewList_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataSetsList">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetDataSetsList" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetDataSetsList_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeSeriesData">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetTimeSeriesData" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetTimeSeriesData_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeSeriesRawData">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetTimeSeriesRawData" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetTimeSeriesRawData_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTimeSeriesDataResampled">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetTimeSeriesDataResampled" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetTimeSeriesDataResampled_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRatingCurveList">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetRatingCurveList" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetRatingCurveList_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRatingTableAsCsvByIdentifier">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetRatingTableAsCsvByIdentifier" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetRatingTableAsCsvByIdentifier_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRatingTable">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetRatingTable" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetRatingTable_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRatingTableExtension">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetRatingTableExtension" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetRatingTableExtension_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateList">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetTemplateList" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetTemplateList_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportData">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetReportData" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetReportData_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocations">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetLocations" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetLocations_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationsByFolderId">
+      <soap:operation soapAction="http://tempuri.org/IAquariusPublishService/GetLocationsByFolderId" style="document" />
+      <wsdl:input>
+        <soap:header message="tns:IAquariusPublishService_GetLocationsByFolderId_InputMessage_Headers" part="AQAuthToken" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AquariusPublishService">
+    <wsdl:port name="BasicHttpBinding_IAquariusPublishService" binding="tns:BasicHttpBinding_IAquariusPublishService">
+      <soap:address location="http://d-mdm4/AQUARIUS/Publish/AquariusPublishService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
