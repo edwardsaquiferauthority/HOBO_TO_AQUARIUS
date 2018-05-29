@@ -46,8 +46,8 @@ namespace AquariusLib
 #endif
             // ReSharper disable once CompareOfFloatsByEqualityOperator
             csv.AppendLine(value != double.NaN//not too concerned
-                ? $@"{timestamp:yyyy-MM-dd hh:mm:ss}, {value},,,,,"
-                : $@"{timestamp:yyyy-MM-dd hh:mm:ss},,,,,,");
+                ? $@"{timestamp:yyyy-MM-dd HH:mm:ss}, {value},,,,,"
+                : $@"{timestamp:yyyy-MM-dd HH:mm:ss},,,,,,");
         }
     }
 }
